@@ -180,7 +180,7 @@ function refresh(current_class) {
 	
 	var children = getSubClasses(classes, current_class) ;
 	$.each(children, function(key, value) {
-		$("#hierarchy_category").html($("#hierarchy_category").html()+"<li class=\"nav-item\"><a onClick=\"refresh('" + value + "'); return false;\" class=\"nav-link js-scroll-trigger\" href=\"\">" + value + " <i class=\"fa fa-arrow-circle-o-right\" aria-hidden=\"true\"></i></a></li>") ;
+		$("#hierarchy_category").html($("#hierarchy_category").html()+"<li class=\"nav-item\"><a onClick=\"refresh('" + value + "'); return false;\" class=\"nav-link js-scroll-trigger\" href=\"\">" + value + " ("+getPhotosBasedOnAClass(value).length+") <i class=\"fa fa-arrow-circle-o-right\" aria-hidden=\"true\"></i></a></li>") ;
 	});
 	
 	
