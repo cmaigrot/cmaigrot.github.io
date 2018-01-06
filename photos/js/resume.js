@@ -161,7 +161,7 @@ function refresh(current_class) {
 	
 	$("#hierarchy_category").html("") ; 
 	if(parent.length > 0) {
-		$("#hierarchy_category").html($("#hierarchy_category").html()+"<li class=\"nav-item\"><a onClick=\"refresh('" + parent + "'); return false;\" class=\"nav-link js-scroll-trigger\" href=\"\"><i class=\"fa fa-arrow-circle-o-left\" aria-hidden=\"true\"></i> " + parent + "</a></li>") ;
+		$("#hierarchy_category").html($("#hierarchy_category").html()+"<li class=\"nav-item\"><a onClick=\"refresh('" + parent + "'); return false;\" class=\"nav-link js-scroll-trigger\" href=\"\"><i class=\"fa fa-arrow-circle-o-left\" aria-hidden=\"true\"></i> " + parent + " ("+getPhotosBasedOnAClass(parent).length+")</a></li>") ;
 	}
 	
 	
@@ -176,7 +176,7 @@ function refresh(current_class) {
 		$(".actual_subclasses").text("") ;
 	}
 	
-	$("#hierarchy_category").html($("#hierarchy_category").html()+"<li class=\"nav-item actual_class\"><span class=\"nav-link\">" + current_class + "</span></li>") ;
+	$("#hierarchy_category").html($("#hierarchy_category").html()+"<li class=\"nav-item actual_class\"><span class=\"nav-link\">" + current_class + " ("+getPhotosBasedOnAClass(current_class).length+")</span></li>") ;
 	
 	var children = getSubClasses(classes, current_class) ;
 	$.each(children, function(key, value) {
