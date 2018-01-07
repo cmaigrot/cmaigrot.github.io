@@ -1,3 +1,7 @@
+<?php
+require('makeDatabase.php') ;
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
