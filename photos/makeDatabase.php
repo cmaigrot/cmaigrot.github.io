@@ -1,5 +1,8 @@
 <?php
 
-echo 'test' ;
+return '{"menu": {
+  "id": "file",
+  "value": "File"
+}}';
 
 ?>

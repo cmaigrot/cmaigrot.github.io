@@ -188,7 +188,7 @@ function refresh(current_class) {
 	var photos = getPhotosBasedOnAClass(current_class);
 
 	$("#list_photos").html("");
-	var image_size = 1 ;
+	var image_size = "2 smallPhoto" ;
 	if (photos.length == 1) { image_size = 12 ; }
 	if (photos.length == 2) { image_size = 6  ; }
 	if (photos.length == 3) { image_size = 4  ; }
@@ -199,6 +199,16 @@ function refresh(current_class) {
 }
 
 $( document ).ready(function() {
+
+
+	$.ajax({
+       url : 'makeDatabase.php',
+       dataType : 'json', // On désire recevoir du HTML
+       success : function(code_json, statut){ // code_html contient le HTML renvoyé
+           alert(code_json);
+       }
+    });
+
 	 current_class = "Vertébrés" ;
 	 refresh(current_class) ;
 });
