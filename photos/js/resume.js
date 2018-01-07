@@ -188,7 +188,7 @@ function refresh(current_class) {
 	var photos = getPhotosBasedOnAClass(current_class);
 
 	$("#list_photos").html("");
-	var image_size = 3 ;
+	var image_size = 1 ;
 	if (photos.length == 1) { image_size = 12 ; }
 	if (photos.length == 2) { image_size = 6  ; }
 	if (photos.length == 3) { image_size = 4  ; }
